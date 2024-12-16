@@ -1,6 +1,3 @@
-
-I'll convert the text to Markdown format:
-
 # Atlassian Landing Page Clone
 
 ## 🚀 Project Overview

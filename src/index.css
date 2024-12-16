@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face{
+    font-family: "charlieDisplay";
+    src: url("/fonts/charlie-display.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "charlieText";
+    src: url("/fonts/charlie-text.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: "charlieText";
+}
+
+@layer components {
+    /* Grid with 14 columns */
+    .stickyGridContainer {
+        display: grid;
+        grid-template-rows: repeat(15, minmax(0, 1fr));
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+
+    }
+
+    /* Border radius utilities */
+    .borderRadius {
+        border-radius: .75rem 0 0 .75rem;
+    }
+
+    .borderRadiusSm {
+        border-radius: .5rem 0 0 .5rem;
+        background: white;
+        color: #1868DB;
+    }
+
+    /* Clip-paths */
+    .firstHeaderClippath {
+        clip-path: polygon(0.5% 0, 50% 0, 50% 10%, 98.5% 0, 100% 85%, 17.75% 100%, 17.25% 85%, 0 85%);
+    }
+
+    .stickyFirstClipPath {
+        clip-path: polygon(0% 32%, 2% 97%, 56% 100%, 56% 96%, 100% 96%, 100% 0%, 55.5% 2%, 56.5% 18%);
+        background-color: rgb(130, 181, 53);
+    }
+
+    .stickySecondClipPath {
+        clip-path: polygon(0% 1%, 100% 0%, 100% 33%, 55% 33%, 55% 100%, 3% 96%, 2% 32%, 0% 32%);
+        background-color: rgb(191, 99, 243);
+    }
+
+    .stickyThirdClipPath {
+        clip-path: polygon(0% 41%, 8% 41%, 10% 21%, 65% 13%, 67% 3%, 100% 0%, 98% 27%, 100% 27%, 100% 100%, 0% 98%);
+        background-color: #FCA700;
+    }
+
+    .stickyFourthClipPath {
+        /* a normal square */
+        /* color: #8B90E4; */
+        display: flex;
+    }
+
+    .stickyFifthClipPath {
+        clip-path: polygon(0% 20%, 48% 10%, 48% 2%, 100% 0%, 100% 97%, 55% 100%, 55% 96%, 2% 95%);
+        background-color: rgb(130, 181, 54);
+    }
+
+      .teamsSmallCLipPath{
+        clip-path: polygon(0 0, 100% 2%, 100% 96%, 0% 100%);
+      }
+    .tansformCenter {
+        transform: translate(-50%, -50%);
+        top: 0;
+        left :0;
+      }
+
+      .altasianAiClipPath{
+        clip-path: polygon(0 1%, 100% 0, 100% 60%, 0 89%);
+      }
+
+      .altasianTeamsClipPath {
+        clip-path: polygon(0 0, 86% 3%, 86% 6%, 100% 5%, 100% 93%, 19.2% 100%, 19% 84%, 0 84%);
+      }
+      .testimonialClipPaths{
+        clip-path: polygon(2% 16%,100% 0,100% 100%,0 100%);
+      }
+      .footerCLipPath{
+        clip-path: polygon(1.5% 0,70% 3%,70% 13%,97% 9%,97.5% 89%,40% 100%,39.9% 90%,1% 88%);
+      }
+      .footerSmallDevices{
+        clip-path: polygon(0 0,100% 4%,100% 97%,28% 100%,28% 87%,0 87%);
+      }
+      .hideScrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .hideScrollbar {
+        -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+        scrollbar-width: none;      /* For Firefox */
+      }
+
+}

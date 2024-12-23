@@ -58,3 +58,5 @@ Add a screenshot or GIF showcasing the clone.
 
 ## 🤝 Contributions
 Contributions, issues, and feature requests are welcome! Feel free to open a pull request or an issue in the repository.
+
+[this is the link to the live demo of the website](https://atlassianlandingpage.pages.dev/)

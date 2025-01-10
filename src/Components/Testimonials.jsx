@@ -80,9 +80,33 @@ const Testimonials = () => {
 
     const [testimonyIndex,setIndex] = useState(0);
     const selectTestimonyRef = useRef();
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // Update window width on resize
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  
 
 useEffect(() =>{
 
+    
+  const isPhone = windowWidth <= 480;
+  const isTablet = windowWidth > 480 && windowWidth <= 768;
+  const isSmallLaptop = windowWidth > 768 && windowWidth <= 1024;
+  const isLaptop = windowWidth > 1024 && windowWidth <= 1440;
+
+
+if(isLaptop){
     if(testimonyIndex < 5 ) {
         selectTestimonyRef.current.scrollTo({
             left : -800,
@@ -99,8 +123,127 @@ useEffect(() =>{
         selectTestimonyRef.current.scrollTo({
             left : 1600,
             behavior: "smooth"
+        })}}
+
+        
+        
+        
+        //small lapptopp
+
+    
+if(isSmallLaptop){
+    if(testimonyIndex < 2 ) {
+        selectTestimonyRef.current.scrollTo({
+            left : -600,
+            behavior: "smooth"
         })    
+    }
+    if(testimonyIndex >= 3 ) {
+                selectTestimonyRef.current.scrollTo({
+                    left : 300,
+                    behavior: "smooth"
+                })    
             }
+            if(testimonyIndex >= 5 ) {
+                selectTestimonyRef.current.scrollTo({
+                    left : 800,
+                    behavior: "smooth"
+                })    
+            }
+            if(testimonyIndex >= 7 ) {
+                selectTestimonyRef.current.scrollTo({
+                    left : 1200,
+                    behavior: "smooth"
+                })    
+            }
+            if(testimonyIndex >= 9 ) {
+                selectTestimonyRef.current.scrollTo({
+                    left : 1600,
+                    behavior: "smooth"
+                })    
+            }
+            if(testimonyIndex >= 11 ) {
+                selectTestimonyRef.current.scrollTo({
+                    left : 2000,
+                    behavior: "smooth"
+                })    
+            }
+}
+
+
+//tablets
+  
+if(isTablet){
+    if(testimonyIndex < 2 ) {
+        selectTestimonyRef.current.scrollTo({
+            left : -600,
+            behavior: "smooth"
+        })    
+    }
+    if(testimonyIndex >= 2 ) {
+                selectTestimonyRef.current.scrollTo({
+                    left : 300,
+                    behavior: "smooth"
+                })    
+            }
+            if(testimonyIndex >= 4 ) {
+                selectTestimonyRef.current.scrollTo({
+                    left : 700,
+                    behavior: "smooth"
+                })    
+            }
+            if(testimonyIndex >= 6 ) {
+                selectTestimonyRef.current.scrollTo({
+                    left : 1000,
+                    behavior: "smooth"
+                })    
+            }
+            if(testimonyIndex >= 8 ) {
+                selectTestimonyRef.current.scrollTo({
+                    left : 1400,
+                    behavior: "smooth"
+                })    
+            }
+
+            if(testimonyIndex >= 10 ) {
+                selectTestimonyRef.current.scrollTo({
+                    left : 1600,
+                    behavior: "smooth"
+                })    
+            }
+            if(testimonyIndex >= 11 ) {
+                selectTestimonyRef.current.scrollTo({
+                    left : 1900,
+                    behavior: "smooth"
+                })    
+            }
+}
+
+
+
+//phones
+if(isPhone){
+   
+   
+    
+    for (let index = 1; index < testimonialElements.length - 1; index++) {
+    
+        const phoneValue = testimonyIndex * 100
+
+        if(testimonyIndex == 1){
+            selectTestimonyRef.current.scrollTo({
+                left : -200,
+                behavior: "smooth"
+            })     
+        }
+        if (testimonyIndex >= index) {
+            selectTestimonyRef.current.scrollTo({
+                left : phoneValue,
+                behavior: "smooth"
+            })  
+        }
+    }
+}
 
 },[testimonyIndex])
 

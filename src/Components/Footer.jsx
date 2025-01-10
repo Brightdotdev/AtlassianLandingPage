@@ -59,10 +59,10 @@ const Footer = () => {
 
 <footer className="flex flex-col gap-24 items-center justify-start relative w-screen">
 
-<div className="flex flex-col md:gap-8 gap-4 items-center justify-center w-[80%] relative  h-[70vh]">
+<div className="flex flex-col md:gap-8  gap-4 items-center justify-center w-[80%] relative  h-[70vh]">
 <CheckmarkSvg styles="absolute top-[30%] lg:right-[15%] w-10 md:w-20 right-0"/>
-<StarSvg styles="absolute -top-4 md:-top-10 left-0 lg:top-0 w-16 md:w-32 lg:left-[20%]" />
-   <BlackStarSvg styles="absolute lg:top-[25%] top-0 md:top-[5%] w-12 md:w-20 left-[30%] lg:left-[15%]" /> 
+<StarSvg styles="absolute -top-4 md:-top-24 left-0 xl:top-0  w-16 md:w-32 xl:left-[20%]" />
+   <BlackStarSvg styles="absolute xl:top-[25%] top-0 md:top-[-1%] w-12 md:w-20 left-[30%] xl:left-[15%]" /> 
 <h4 className="md:text-4xl text-center font-charlieText">
 Help us shape <b className='font-charlieDisplay'>the future <br/> of teamwork</b>
     </h4> 

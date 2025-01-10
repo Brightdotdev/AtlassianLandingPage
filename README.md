@@ -40,8 +40,8 @@ npm install
 ```bash
 npm run dev
 ```
-
-### 4. Build for Production
+or
+#### Build for Production
 ```bash
 npm run build
 ```
@@ -54,7 +54,8 @@ Tailwind CSS is configured with a `tailwind.config.js` file to customize themes 
 - Enhanced understanding of Tailwind CSS utilities and Vite's fast development workflow.
 
 ## 📸 Preview
-Add a screenshot or GIF showcasing the clone.
+
+![alt text](image.png)
 
 ## 🤝 Contributions
 Contributions, issues, and feature requests are welcome! Feel free to open a pull request or an issue in the repository.
